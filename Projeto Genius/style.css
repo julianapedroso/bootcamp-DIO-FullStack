@@ -35,6 +35,7 @@ body {
   border-radius: 100%;
   height: 700px;
   width: 700px;
+  cursor: pointer;
 }
 
 .__green {
@@ -59,5 +60,9 @@ body {
   grid-area: part-blue;
   background: var(--blue-color);
   border-bottom-right-radius: 100%;
+}
+
+.selected {
+  opacity: 0.6;
 }
 
