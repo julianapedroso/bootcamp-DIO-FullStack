@@ -1,0 +1,63 @@
+:root {
+  --blue-color:#2ca8e4;
+  --red-color: #e63a2c;
+  --yellow-color:#f8e356;
+  --green-color:#0ecb5e;
+  --background-color: #24222c;
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-color);
+}
+
+.main-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.genius {
+  display: grid;
+  grid-template-areas: 'part-green part-red' 
+  'part-yellow part-blue';
+  grid-gap: 10px;
+  border: 10px solid var(--white-color);
+  background: var(--white-color);
+  border-radius: 100%;
+  height: 700px;
+  width: 700px;
+}
+
+.__green {
+  grid-area: part-green;
+  background: var(--green-color);
+  border-top-left-radius: 100%;
+}
+
+.__red {
+  grid-area: part-red;
+  background: var(--red-color);
+  border-top-right-radius: 100%;
+}
+
+.__yellow {
+  grid-area: part-yellow;
+  background: var(--yellow-color);
+  border-bottom-left-radius: 100%;
+}
+
+.__blue {
+  grid-area: part-blue;
+  background: var(--blue-color);
+  border-bottom-right-radius: 100%;
+}
+
