@@ -1,10 +1,11 @@
 :root {
-  --blue-color:#2ca8e4;
+  --blue-color: #2ca8e4;
   --red-color: #e63a2c;
-  --yellow-color:#f8e356;
-  --green-color:#0ecb5e;
+  --yellow-color: #f8e356;
+  --green-color: #0ecb5e;
   --background-color: #24222c;
   --white-color: #fff;
+  --footer-background-light: #e5e8e8;
 }
 
 * {
@@ -15,27 +16,45 @@
 
 body {
   background: var(--background-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+}
+
+#logo img {
+  margin-top: 3rem;
+  width: 15%;
+}
+
+#btn-start {
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
 }
 
 .main-game {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
+  margin: 4rem 0;
 }
 
 .genius {
   display: grid;
-  grid-template-areas: 'part-green part-red' 
-  'part-yellow part-blue';
+  grid-template-areas:
+    'part-green part-red'
+    'part-yellow part-blue';
   grid-gap: 10px;
   border: 10px solid var(--white-color);
   background: var(--white-color);
   border-radius: 100%;
-  height: 700px;
-  width: 700px;
+  height: 40rem;
+  width: 40rem;
   cursor: pointer;
+  margin-bottom: 10rem;
 }
 
 .__green {
@@ -66,3 +85,73 @@ body {
   opacity: 0.6;
 }
 
+#copy {
+  align-items: center;
+  background: var(--footer-background-light);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  height: 10vh;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+
+#copy p:first-child {
+  font-size: 0.85rem;
+}
+
+.link-media {
+  padding-top: 0.3rem;
+}
+
+.link-media a {
+  color: var(--color-link);
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (max-width: 1440px) {
+  .main-game {
+    width: auto;
+  }
+
+  .genius {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #logo img {
+    width: 20%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 415px) {
+  #logo img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+  #logo img {
+    width: 40%;
+  }
+
+  #copy {
+    font-size: 0.7rem;
+  }
+
+  #copy p:first-child {
+    font-size: 0.65rem;
+  }
+
+  .link-media a {
+    font-size: 0.7rem;
+  }
+}

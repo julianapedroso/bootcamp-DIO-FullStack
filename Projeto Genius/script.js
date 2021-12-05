@@ -41,7 +41,7 @@ const checkOrder = () => {
     }
   }
   if (clickedOrder.length == order.length) {
-    alert(`Score: ${score}\nYou're right! The next level is about to start`);
+    alert(`Score: ${score}\nYou're right 🎉 The next level is about to start!`);
     nextLevel();
   }
 };
@@ -77,7 +77,7 @@ const nextLevel = () => {
 
 // function game over:
 const gameOver = () => {
-  alert(`Score: ${score}\nYou lost :(\nConfirm to restart the game`);
+  alert(`Score: ${score}\nYou lost 👎\nConfirm to restart the game...`);
   order = [];
   clickedOrder = [];
 
@@ -85,7 +85,7 @@ const gameOver = () => {
 };
 
 const playGame = () => {
-  alert(`Welcome to Genius. Start new game?`);
+  alert(`👋 Welcome to Genius. Start new game?`);
   score = [];
 
   nextLevel();
